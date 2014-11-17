@@ -40,8 +40,8 @@
 #                                                                              #
 ################################################################################
 
-programName="soil"
-programVersion="2014-11-01T2023Z"
+name="soil"
+version="2014-11-01T2023Z"
 
 # Determine the directory of this script.
 # Specifically, resolve ${source} until the file is no longer a symlink. If
@@ -76,5 +76,5 @@ fi
 echo "set up \
 ROOT \
 version "${ROOTVersion}" \
-using "${programName}" \
-version "${programVersion}""
+using "${name}" \
+version "${version}""
