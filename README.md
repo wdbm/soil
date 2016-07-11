@@ -12,3 +12,4 @@ This program has been tested with the following ROOT versions:
 - 6.00.00
 - 6.01.02
 - 6.03.01
+- 6.07.07

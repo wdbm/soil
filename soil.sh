@@ -15,6 +15,7 @@
 # - 6.00.00                                                                    #
 # - 6.01.02                                                                    #
 # - 6.03.01                                                                    #
+# - 6.07.07                                                                    #
 #                                                                              #
 ################################################################################
 #                                                                              #
@@ -40,8 +41,8 @@
 #                                                                              #
 ################################################################################
 
-name="soil"
-version="2014-11-01T2023Z"
+program_name="soil"
+program_version="2016-07-11T1006Z"
 
 # Determine the directory of this script.
 # Specifically, resolve ${source} until the file is no longer a symlink. If
@@ -61,13 +62,13 @@ export PATH="${ROOTSYS}"/bin:"${PATH}"
 export LD_LIBRARY_PATH="${ROOTSYS}"/lib:"${LD_LIBRARY_PATH}"
 
 # Check the ROOT version.
-ROOTVersion="$(root-config --version)"
-ROOTVersionMajor="$(echo "${ROOTVersion}" | cut -d. -f1)"
+ROOT_version="$(root-config --version)"
+ROOT_version_major="$(echo "${ROOT_version}" | cut -d. -f1)"
 
 # Set PyROOT environment variables.
 if [[ \
-    "${ROOTVersionMajor}" = "6" || \
-    "${ROOTVersionMajor}" = "5" \
+    "${ROOT_version_major}" = "6" || \
+    "${ROOT_version_major}" = "5" \
     ]]; then
     export PYTHONPATH="${ROOTSYS}"/lib/
     export LD_LIBRARY_PATH=/usr/lib/python2.6/:"${LD_LIBRARY_PATH}"
@@ -75,6 +76,6 @@ fi
 
 echo "set up \
 ROOT \
-version "${ROOTVersion}" \
-using "${name}" \
-version "${version}""
+version "${ROOT_version}" \
+using "${program_name}" \
+version "${program_version}""
