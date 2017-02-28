@@ -16,6 +16,8 @@
 # - 6.01.02                                                                    #
 # - 6.03.01                                                                    #
 # - 6.07.07                                                                    #
+# - 6.08.00                                                                    #
+# - 6.08.02                                                                    #
 #                                                                              #
 ################################################################################
 #                                                                              #
@@ -42,7 +44,7 @@
 ################################################################################
 
 program_name="soil"
-program_version="2016-07-19T1409Z"
+program_version="2017-02-28T2007Z"
 
 # Determine the directory of this script.
 # Specifically, resolve ${source} until the file is no longer a symlink. If
@@ -75,7 +77,4 @@ if [[ \
 fi
 
 echo -e "You've soiled yourself:\nset up \
-ROOT \
-version "${ROOT_version}" \
-using "${program_name}" \
-version "${program_version}""
+ROOT "${ROOT_version}" set up using "${program_name}" "${program_version}""

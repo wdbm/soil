@@ -2,7 +2,7 @@
 
 ROOT environment setup
 
-# instructions
+# usage
 
 The program `setup.sh` installs ROOT dependencies and a version of ROOT.
 
@@ -16,3 +16,4 @@ This program has been tested with the following ROOT versions:
 - 6.03.01
 - 6.07.07
 - 6.08.00
+- 6.08.02

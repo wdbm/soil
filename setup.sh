@@ -39,8 +39,16 @@ sudo apt-get -y install libkrb5-dev
 sudo apt-get -y install libgsl0-dev
 sudo apt-get -y install libqt4-dev
 
-filename="root_v6.08.00.Linux-ubuntu16-x86_64-gcc5.4.tar.gz"
 echo "install ROOT"
-wget https://root.cern.ch/download/"${filename}"
+version_ROOT="root_v6.08.02.Linux-ubuntu16-x86_64-gcc5.4"
+filename=""${version_ROOT}".tar.gz"
+directory_ROOT=""${HOME}"/ROOT"
+directory_version_ROOT=""${directory}"/"${version_ROOT}""
+mkdir -p "${directory_version_ROOT}"
+cd "${directory_version_ROOT}"
+wget --directory-prefix="${directory_version_ROOT}" https://root.cern.ch/download/"${filename}"
 tar -xvf "${filename}"
 rm "${filename}"
+wget --directory-prefix="${directory_version_ROOT}" https://raw.githubusercontent.com/wdbm/soil/master/soil.sh
+echo "Source soil.sh to set up ROOT or add the following line to .bashrc:"
+echo "source "${directory_version_ROOT}"/soil.sh"
