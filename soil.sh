@@ -44,7 +44,7 @@
 ################################################################################
 
 program_name="soil"
-program_version="2017-02-28T2007Z"
+program_version="2017-03-01T1342Z"
 
 # Determine the directory of this script.
 # Specifically, resolve ${source} until the file is no longer a symlink. If
@@ -76,5 +76,4 @@ if [[ \
     export LD_LIBRARY_PATH=/usr/lib/python2.6/:"${LD_LIBRARY_PATH}"
 fi
 
-echo -e "You've soiled yourself:\nset up \
-ROOT "${ROOT_version}" set up using "${program_name}" "${program_version}""
+echo -e "You've soiled yourself: ROOT "${ROOT_version}" set up using "${program_name}" "${program_version}""
